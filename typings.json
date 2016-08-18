@@ -1,4 +1,7 @@
 {
+  "atom": {
+    "rewriteTsconfig": true
+  },
   "name": "angular2-meteor-base",
   "version": false,
   "dependencies": {
