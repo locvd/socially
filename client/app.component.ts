@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Parties } from '../both/collection/paties.collection';
+import { Parties } from '../both/collection/parties.collection';
 import template from './app.component.html';
 @Component({
     selector: 'app',
