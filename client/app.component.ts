@@ -1,18 +1,9 @@
 import { Component } from '@angular/core';
-import { Parties } from '../both/collection/parties.collection';
-import { PartiesFormComponent } from './imports/parties/parties-form.component';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 import template from './app.component.html';
 @Component({
     selector: 'app',
     template,
-    directives: [PartiesFormComponent]
+    directives: [ROUTER_DIRECTIVES]
 })
-export class AppComponent {
-    parties: Mongo.Cursor<any>;
-    constructor() {
-        this.parties = Parties.find();
-    }
-    removeParty(party) {
-        Parties.remove(party._id);
-    }
-}
+export class AppComponent { }
