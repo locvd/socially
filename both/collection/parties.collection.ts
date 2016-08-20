@@ -1,2 +1,13 @@
 import { Mongo } from 'meteor/mongo';
-export const Parties = new Mongo.Collection('parties');
+import { Party } from '../interfaces/party.interface.ts';
+export const Parties = new Mongo.Collection<Party>('parties');
+
+function loggedIn() {
+    return !!Meteor.user();
+}
+
+Parties.allow({
+    insert: loggedIn,
+    update: loggedIn,
+    remove: loggedIn
+});
